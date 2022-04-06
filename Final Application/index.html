@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- include A-Frame obviously -->
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <!-- include ar.js for A-Frame -->
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs>
+  
+    <a-assets>
+		<a-asset-item id="dolphin" src="obj/dolphin_v2_max2011_it2.obj"></a-asset-item>
+		<a-asset-item id="Turtle" src="obj/tt.obj"></a-asset-item>
+		<a-asset-item id="Horse" src="obj/sea.obj"></a-asset-item>
+		<a-asset-item id="Fish" src="obj/Long_Fin_White_Cloud_v1_l3.obj"></a-asset-item>
+	</a-assets>
+	
+	<!--Dolphin AR object-->
+	
+	<a-marker preset='custom' type='pattern' url='marker/pattern-p.patt'>
+	  <a-entity obj-model="obj: #dolphin;" material="src: obj/dolphin.jpg" rotation="0 180 250" position="0.4 0 0.7" scale="0.01 0.01 0.01" ></a-entity>
+	  <a-entity position="2 0.2 0.7" scale="4 4 4" rotation="-90 0 0" text="value: Dolphin;color:white"></a-entity>
+	  <a-entity position="2 0.2 0.9"  scale="4 4 4" rotation="-90 0 0" text="value: Aluvihare W B W M R U P U;color:white"></a-entity>
+	</a-marker>
+
+
+	<!--Sea Turtle AR object-->
+
+	<a-marker preset='custom' type='pattern' url='marker/pattern-t.patt'>
+	 <a-entity obj-model="obj: #Turtle;" material="src: obj/tt.jpg" rotation="0 180 120" position="0 0 0.1"  scale="0.03 0.03 0.03"></a-entity>
+     <a-entity position="2 0.2 0.9" scale="4 4 4" rotation="-90 0 0" text="value: Sea Turtle;color:white"></a-entity>
+     <a-entity position="2 0.2 1.1" scale="4 4 4" rotation="-90 0 0" text="value: Weerasooriya K T N;color:white"></a-entity>
+    </a-marker>
+	
+	
+	<!--Sea Horse AR object-->
+
+	<a-marker preset='custom' type='pattern' url='marker/pattern-k.patt'>
+	 <a-entity obj-model="obj: #Horse;" material="src: obj/sea.png" rotation="120 180 90" position="0 0 0"  scale="0.02 0.02 0.02"></a-entity>
+     <a-entity position="2 0.2 0.7" scale="4 4 4" rotation="-90 0 0" text="value: Sea Horse;color:white"></a-entity>
+     <a-entity position="2 0.2 0.9" scale="4 4 4" rotation="-90 0 0" text="value: Rajapaksha K D;color:white"></a-entity>
+    </a-marker>
+	
+
+	<!--Long Line Fish AR object-->
+	
+	<a-marker preset='custom' type='pattern' url='marker/pattern-r.patt'>
+	 <a-entity obj-model="obj: #Fish;" material="src: obj/Long-Fin.jpg" rotation="0 180 180" position="0 0 0.3" scale="0.4 0.4 0.4" ></a-entity>
+     <a-entity position="2 0.2 0.9" scale="4 4 4" rotation="-90 0 0" text="value: Long Fine Fish;color:white"></a-entity>
+	 <a-entity position="2 0.2 1.1"  scale="4 4 4" rotation="-90 0 0" text="value: Wijayasinha P R ;color:white"></a-entity>
+    </a-marker>
+
+
+<a-entity camera></a-entity>
+</a-scene>
+
+
+</body>
+
+</html> 
+
+
+
+
